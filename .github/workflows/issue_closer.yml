@@ -6,6 +6,7 @@ on:
 
 jobs:
   comment:
+    if: false
     runs-on: ubuntu-slim
     steps:
       - name: Process an issue.

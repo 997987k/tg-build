@@ -8,7 +8,8 @@ on:
 
 jobs:
   docker:
-    if: false    name: Ubuntu
+    if: false
+    name: Ubuntu
     runs-on: ubuntu-latest
     if: github.ref_name == github.event.repository.default_branch
 
