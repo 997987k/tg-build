@@ -49,6 +49,12 @@ jobs:
           git config --global user.email "you@example.com"
           git config --global user.name "Sample"
 
+      - name: Fix Perl path for OpenSSL.
+        run: |
+          set PATH=%PATH:C:\Program Files\Git\bin;=%
+          set PATH=%PATH:C:\Program Files\Git\usr\bin;=%
+          echo PATH=%PATH%>>%GITHUB_ENV%
+
       - uses: ilammy/msvc-dev-cmd@v1
         name: Native Tools Command Prompt.
         with:
